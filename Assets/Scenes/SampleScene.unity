@@ -613,6 +613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 439032729}
   chaseRange: 10
+  turnSpeed: 5
 --- !u!114 &1197973474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,7 +640,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 0c8c3719afd7269459ce215c92d3912e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -657,7 +658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd40a80072835cc4da868fc9e2bce1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 439032729}
   damage: 25
 --- !u!1001 &1205214556
 PrefabInstance:
