@@ -27,7 +27,6 @@ public class EnemyAI : MonoBehaviour
         else if(distanceToTarget <= chaseRange)
         {
             isProvoked = true;
-            //navMeshAgent.SetDestination(target.position);
         }
     }
 
@@ -45,12 +44,14 @@ public class EnemyAI : MonoBehaviour
 
     private void ChaseTarget()
     {
+        GetComponent<Animator>().SetBool("attack", false);
+        GetComponent<Animator>().SetTrigger("move");
         navMeshAgent.SetDestination(target.position);
     }
 
     void AttackTarget()
     {
-        Debug.Log("Sir, you are being attacked!");
+        GetComponent<Animator>().SetBool("attack", true);
     }
 
     void OnDrawGizmosSelected() 
