@@ -342,7 +342,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b68388c573022b4796cf8a7f2e19b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 15
+  ammoSlots:
+  - ammoType: 0
+    ammoAmount: 20
+  - ammoType: 1
+    ammoAmount: 10
+  - ammoType: 2
+    ammoAmount: 5
 --- !u!1 &4634443881911729942
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 326122338066622142}
+  - component: {fileID: 32018711}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -376,6 +383,19 @@ Transform:
   m_Father: {fileID: 400000}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -84.709, z: 0}
+--- !u!114 &32018711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634443881911729942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab2fccde9c7c884e95ad5ba0222d015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeapon: 1
 --- !u!1001 &1330350989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -405,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.501
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
       propertyPath: m_LocalPosition.y
@@ -413,7 +433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.046
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
       propertyPath: m_LocalRotation.w
@@ -473,11 +493,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 2000000}
-  range: 50
-  damage: 25
   muzzleFlash: {fileID: 6804754051395490704}
   hitEffect: {fileID: 8825024128804027519, guid: 79bb17e7096898b4987bb25efb3cda1c, type: 3}
   ammoSlot: {fileID: 2186758987530134401}
+  ammoType: 1
+  range: 15
+  damage: 15
+  timeBetweenShots: 1
 --- !u!1001 &1864449575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -563,11 +585,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 2000000}
-  range: 50
-  damage: 25
   muzzleFlash: {fileID: 6363934280029884479}
   hitEffect: {fileID: 8825024128804027519, guid: 79bb17e7096898b4987bb25efb3cda1c, type: 3}
   ammoSlot: {fileID: 2186758987530134401}
+  ammoType: 2
+  range: 10
+  damage: 50
+  timeBetweenShots: 2
 --- !u!1001 &2156101402535353741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -577,7 +601,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 186316, guid: 18ea9c7316b4aba44ab093010d1b034d, type: 3}
       propertyPath: m_Name
-      value: Machine Gun
+      value: Machine gun
       objectReference: {fileID: 0}
     - target: {fileID: 466178, guid: 18ea9c7316b4aba44ab093010d1b034d, type: 3}
       propertyPath: m_RootOrder
@@ -622,6 +646,10 @@ PrefabInstance:
     - target: {fileID: 466178, guid: 18ea9c7316b4aba44ab093010d1b034d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615451088, guid: 18ea9c7316b4aba44ab093010d1b034d, type: 3}
+      propertyPath: range
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1615451088, guid: 18ea9c7316b4aba44ab093010d1b034d, type: 3}
       propertyPath: FPCamera
