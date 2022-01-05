@@ -34,4 +34,14 @@ public class Flashlight : MonoBehaviour
             flashlight.spotAngle -= angleDecay * Time.deltaTime;
         }
     }
+
+    public void RestoreLightIntensity(float restoreIntensity)
+    {
+        flashlight.intensity += restoreIntensity;
+    }
+
+    public void RestoreLightAngle(float restoreAngle)
+    {
+        flashlight.spotAngle += restoreAngle;
+    }
 }
