@@ -148,6 +148,10 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: -0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 3955122138551987557, guid: 7152fe56f42019541b8e4c97be8e1f9b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7225876170929524106, guid: 7152fe56f42019541b8e4c97be8e1f9b, type: 3}
       propertyPath: m_RootOrder
       value: 0
