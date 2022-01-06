@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 1905115186840146290}
   - component: {fileID: 7375088557456687695}
   - component: {fileID: 2186758987530134401}
+  - component: {fileID: 7985945340255087807}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -350,6 +351,20 @@ MonoBehaviour:
     ammoAmount: 10
   - ammoType: 2
     ammoAmount: 5
+--- !u!114 &7985945340255087807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec475956829ea144497c86dbd3056d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  receivedDamageCanvas: {fileID: 0}
+  splatterTime: 0.5
 --- !u!1 &4634443881911729942
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +516,7 @@ MonoBehaviour:
   range: 15
   damage: 15
   timeBetweenShots: 1
+  ammoText: {fileID: 0}
 --- !u!1001 &1864449575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -593,6 +609,7 @@ MonoBehaviour:
   range: 10
   damage: 50
   timeBetweenShots: 2
+  ammoText: {fileID: 0}
 --- !u!1001 &1939019968868136791
 PrefabInstance:
   m_ObjectHideFlags: 0
