@@ -34,7 +34,8 @@ public class Weapon : MonoBehaviour
 
     private void DisplayAmmo()
     {
-        ammoText.text = ammoSlot.GetCurrentAmmo(ammoType).ToString();
+        int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
+        ammoText.text = currentAmmo.ToString();
     }
 
     IEnumerator Shoot()
