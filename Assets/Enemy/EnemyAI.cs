@@ -29,7 +29,7 @@ public class EnemyAI : MonoBehaviour
             enabled = false; 
         }
         distanceToTarget = Vector3.Distance(target.position, transform.position);
-        if(isProvoked)
+        if(isProvoked && !enemyHealth.IsDead())
         {
             EngageTarget();
         }
